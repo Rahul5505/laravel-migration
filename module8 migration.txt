@@ -1,0 +1,21 @@
+MODULE – 8(Migration)
+
+
+1)How to do config database in laravel.
+The configuration for Laravel's database services is located in your application's config/database.php configuration file. In this file, you may define all of your database connections, as well as specify which connection should be used by default.
+
+2)Call MySQLi Store Procedure from Laravel.
+$query = "CALL your_stored_procedure(); COMMIT;";
+
+DB::statement($query);
+
+3)Apply Curd Operation through Query Builder for Employee Management
+insert data AddEmployeeModel::create($data);
+select all data $data=AddEmployeeModel::all();
+ $editemp=AddEmployeeModel::where('id',$id)->first();
+AddEmployeeModel::where('id',$id)->update($data);
+
+4)Create All Migration for Employee management
+php artisan make:migration employee
+php artisan make:migration salary
+php artisan make:migration division
